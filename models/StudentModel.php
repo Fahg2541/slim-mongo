@@ -45,4 +45,5 @@ class StudentModel {
         catch (MongoCursorException $e) {
             return false;
         }
+    }
 }

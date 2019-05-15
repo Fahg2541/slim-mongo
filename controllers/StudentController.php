@@ -54,4 +54,5 @@ class StudentController
       $db = new StudentModel();
       $result = $db->insert($name, $age, $education, $address);
       response(200, $result);
+   }
 }
