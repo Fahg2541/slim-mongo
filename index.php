@@ -25,6 +25,18 @@ require_once '/controllers/StudentController.php';
   $app->post('/insert', function() use($app){
     StudentController::insert($app->request());
   });
+
+  $app->get('/findStudentById/:id', function ($id) {
+    StudentController::findById($id);
+  });
+
+  $app->post('/update', function() use($app){
+    StudentController::update($app->request());
+  });
+  
+  $app->get('/delete/:id', function ($id) {
+    StudentController::delete($id);
+  });
   
   // $app->get('/', ['TestController', 'index']);
   // $app->post('/insert', function() use($app){
